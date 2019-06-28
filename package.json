@@ -1,5 +1,5 @@
 {
-  "name": "indecision-app",
+  "name": "my-app",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Guido",
@@ -15,6 +15,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^3.0.0",
     "live-server": "^1.2.1",
     "node-sass": "^4.12.0",
