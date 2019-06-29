@@ -86,6 +86,7 @@ const sortByAmount = () => ({
     updates: { sortBy: 'amount' }
 });
 
+
 // Filter reducer 
 const filtersReducerDefaultState = {
     text: '',
@@ -93,6 +94,7 @@ const filtersReducerDefaultState = {
     startDate: undefined,
     endDate: undefined
 };
+
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
     switch(action.type) {
         case 'CHANGE_FILTER':
