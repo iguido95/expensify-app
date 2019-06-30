@@ -8,14 +8,18 @@ const now = moment().locale('nl');
 console.log(now.format('D MMMM YYYY'));
 
 export default class ExpenseForm extends React.Component {
-    state = {
-        description: "",
-        amount: "",
-        note: "",
-        createdAt: moment().locale('nl'),
-        dateFocused: false,
-        error: undefined
-    };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            description: props.expense ? props.expense.description : '',
+            note: props.expense ? props.expense.note : '',
+            amount: props.expense ? (props.expense.amount / 100).toString() : '',
+            createdAt: props.expense ? moment(props.expense.createdAt).locale('nl') : moment().locale('nl'),
+            dateFocused: false,
+            error: undefined
+        };
+    }
 
     onDescriptionChange = (event) => {
         const description = event.target.value;
