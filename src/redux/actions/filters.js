@@ -15,7 +15,6 @@ export const setEndDate = (endDate) => ({
     updates: { endDate: endDate }
 });
 
-
 // SORT_BY_DATE
 export const sortByDate = () => ({
     type: "CHANGE_FILTER",
@@ -23,7 +22,7 @@ export const sortByDate = () => ({
 });
 
 // SORT_BY_AMOUNT
-const sortByAmount = () => ({
+export const sortByAmount = () => ({
     type: "CHANGE_FILTER",
     updates: { sortBy: 'amount' }
 });

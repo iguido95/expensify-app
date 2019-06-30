@@ -15,7 +15,7 @@ console.log(store.getState());
 store.dispatch(addExpense({
     description: "Water bill",
     amount: 15000,
-    createdAt: 1
+    createdAt: 6
 }));
 
 store.dispatch(addExpense({
@@ -24,19 +24,13 @@ store.dispatch(addExpense({
     createdAt: 5
 }));
 
+store.dispatch(addExpense({
+    description: "Electricity bill",
+    amount: 210000,
+    createdAt: 8
+}));
+
 console.log(store.getState());
-
-
-setTimeout(() => {
-    store.dispatch(setTextFilter('belasting'));
-}, 100);
-setTimeout(() => {
-    store.dispatch(addExpense({
-        description: "Belasting",
-        amount: 350000,
-        createdAt: 5
-    }));
-}, 50);
 
 
 const expenses = store.getState().expenses;
