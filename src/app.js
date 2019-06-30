@@ -9,7 +9,6 @@ import getVisibleExpenses from './redux/selectors/expenses';
 import './styles/styles.scss';
 
 const store = configureStore();
-console.log(store.getState());
 
 
 store.dispatch(addExpense({
@@ -30,12 +29,10 @@ store.dispatch(addExpense({
     createdAt: 8
 }));
 
-console.log(store.getState());
 
 
 const expenses = store.getState().expenses;
 const filters = store.getState().filters;
-console.log(getVisibleExpenses(expenses, filters));
 
 const jsx = (
     <Provider store={store}>
